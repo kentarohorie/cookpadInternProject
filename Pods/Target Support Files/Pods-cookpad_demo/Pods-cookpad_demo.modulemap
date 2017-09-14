@@ -1,0 +1,6 @@
+framework module Pods_cookpad_demo {
+  umbrella header "Pods-cookpad_demo-umbrella.h"
+
+  export *
+  module * { export * }
+}
