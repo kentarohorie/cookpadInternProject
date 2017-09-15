@@ -13,7 +13,15 @@ class DishCollection: NSObject {
     
     override init() {
         super.init()
-        let dishDicArray = [
+        self.dishArray = [
+            Dish(name: "カレー", image: UIImage(named: "kare")!),
+            Dish(name: "野菜炒め", image: UIImage(named: "yasaiitame")!),
+            Dish(name: "カルボナーラ", image: UIImage(named: "karubo")!),
+            Dish(name: "ピーマンの肉詰め", image: UIImage(named: "piman")!),
+            Dish(name: "お好み焼き", image: UIImage(named: "okonomiyaki")!),
+        ]
+        
+        /*let dishDicArray = [
             ["name": "海鮮丼",
              "image": "curry.jpg"
              ],
@@ -107,6 +115,6 @@ class DishCollection: NSObject {
             dishArray?.append(dish)
         }
         
-        print(dishArray)
+        print(dishArray)*/
     }
 }

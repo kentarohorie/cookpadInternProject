@@ -1,16 +1,18 @@
 //
-//  SellectingViewController.swift
+//  SellectingDishViewController.swift
 //  cookpad_demo
 //
-//  Created by 堀江健太朗 on 2017/09/14.
+//  Created by 堀江健太朗 on 2017/09/15.
 //  Copyright © 2017年 kentaro. All rights reserved.
 //
 
 import UIKit
+
+import UIKit
 import Koloda
 
-class SellectingViewController: UIViewController {
-
+class SellectingDishViewController: UIViewController {
+    
     @IBOutlet weak var kolodaView: KolodaView!
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
@@ -23,17 +25,8 @@ class SellectingViewController: UIViewController {
         kolodaView.swipe(SwipeResultDirection.left, force: true)
     }
     
-    let images = [
-        UIImage(named: "dish1.jpg"),
-        UIImage(named: "dish2.jpg"),
-        UIImage(named: "dish3.jpg")
-    ]
-    
-    let titles = [
-        "カレーライス",
-        "カツ丼",
-        "お好み焼き"
-    ]
+    let image = UIImage(named: "dish1.jpg")
+    let titleString = "カレーライス"
     
     var dataSource = [UIView]()
     
@@ -43,10 +36,10 @@ class SellectingViewController: UIViewController {
         navigationItem.hidesBackButton = true
         kolodaView.backgroundColor = UIColor.white
         
-        for index in 0...2 {
-            let card = createCard(image: images[index]!, coverViewFrame: kolodaView.frame, title: titles[index])
+        //for index in 0...2 {
+            let card = createCard(image: image!, coverViewFrame: kolodaView.frame, title: titleString)
             dataSource.append(card)
-        }
+        //}
         
         setLayerToButton(button: leftButton)
         setLayerToButton(button: rightButton)
@@ -54,7 +47,7 @@ class SellectingViewController: UIViewController {
         kolodaView.delegate = self
         kolodaView.dataSource = self
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -106,7 +99,7 @@ class SellectingViewController: UIViewController {
     }
 }
 
-extension SellectingViewController: KolodaViewDataSource {
+extension SellectingDishViewController: KolodaViewDataSource {
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
         return DragSpeed(rawValue: 1)!
     }
@@ -126,14 +119,19 @@ extension SellectingViewController: KolodaViewDataSource {
     }
 }
 
-extension SellectingViewController: KolodaViewDelegate {
+extension SellectingDishViewController: KolodaViewDelegate {
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
         print("kolodadidrunoutofcard")
-        performSegue(withIdentifier: "segueToSearched", sender: self)
+        //performSegue(withIdentifier: "segueToDecide", sender: self)
     } // カードをスワイプし終えた時
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
-        print("swipecard\(index) and direction\(direction)")
+        if (direction == .right) {
+            performSegue(withIdentifier: "segueToDecide", sender: self)
+        } else {
+            print("oghoehgogeohg")
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
