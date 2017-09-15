@@ -37,6 +37,7 @@ class SellectingDishViewController: UIViewController {
         
         navigationItem.hidesBackButton = true
         kolodaView.backgroundColor = UIColor.white
+        navigationController?.setNavigationBarHidden(false, animated: false)
         
         //for index in 0...2 {
             let card = createCard(image: targetDish.image!, coverViewFrame: kolodaView.frame, title: targetDish.name!)
@@ -77,9 +78,10 @@ class SellectingDishViewController: UIViewController {
         let label = UILabel()
         label.frame.size = fukidashiCoverView.frame.size
         label.frame.origin = CGPoint(x: 0, y: 0)
-        label.text = title
+        label.text = "\(title)？"
         label.textAlignment = NSTextAlignment.center
         label.backgroundColor = UIColor.clear
+        label.font = UIFont.systemFont(ofSize: 24)
         fukidashiCoverView.addSubview(label)
         
         kolodaView.layer.borderWidth = 1

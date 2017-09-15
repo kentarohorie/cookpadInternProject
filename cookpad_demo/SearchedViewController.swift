@@ -53,6 +53,7 @@ class SearchedViewController: UIViewController, UICollectionViewDataSource, UICo
         let label = UILabel(frame: CGRect(x: 0, y: imageView.frame.size.height, width: cell.frame.size.width, height: cell.frame.size.height - imageView.frame.size.height))
         label.text = dishCollection.dishArray?[indexPath.item].name!
         label.textAlignment = NSTextAlignment.center
+        label.font = UIFont.systemFont(ofSize: 18)
         
         cell.layer.cornerRadius = 4
         cell.layer.borderColor = UIColor.gray.cgColor

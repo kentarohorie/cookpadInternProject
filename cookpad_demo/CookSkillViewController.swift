@@ -69,6 +69,7 @@ class CookSkillViewController: UIViewController {
         label.text = title
         label.backgroundColor = UIColor.white
         label.textAlignment = NSTextAlignment.center
+        label.font = UIFont.systemFont(ofSize: 24)
         
         kolodaView.layer.borderWidth = 1
         kolodaView.layer.borderColor = UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1).cgColor

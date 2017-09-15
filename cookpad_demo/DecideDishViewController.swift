@@ -24,6 +24,9 @@ class DecideDishViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = "\((targetDish?.name!)!)に決まり！"
+        
+        cookpadButton.layer.cornerRadius = 10
+        cookpadButton.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {

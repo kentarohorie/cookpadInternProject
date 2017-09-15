@@ -24,15 +24,14 @@ class SellectingViewController: UIViewController {
     }
     
     let images = [
-        UIImage(named: "kare"),
-        UIImage(named: "dish2.jpg"),
-        UIImage(named: "dish3.jpg")
+        UIImage(named: "meat"),
+        UIImage(named: "hot")//,
+        //UIImage(named: "rice")
     ]
     
     let titles = [
-        "カレーライス",
-        "カツ丼",
-        "お好み焼き"
+        "お肉がいい？",
+        "辛いのがいい？"
     ]
     
     var dataSource = [UIView]()
@@ -42,8 +41,9 @@ class SellectingViewController: UIViewController {
         
         navigationItem.hidesBackButton = true
         kolodaView.backgroundColor = UIColor.white
+        navigationController?.setNavigationBarHidden(false, animated: false)
         
-        for index in 0...2 {
+        for index in 0...1 {
             let card = createCard(image: images[index]!, coverViewFrame: kolodaView.frame, title: titles[index])
             dataSource.append(card)
         }
@@ -85,6 +85,7 @@ class SellectingViewController: UIViewController {
         label.text = title
         label.textAlignment = NSTextAlignment.center
         label.backgroundColor = UIColor.clear
+        label.font = UIFont.systemFont(ofSize: 24)
         fukidashiCoverView.addSubview(label)
         
         kolodaView.layer.borderWidth = 1
