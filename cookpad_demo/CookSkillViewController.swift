@@ -25,7 +25,7 @@ class CookSkillViewController: UIViewController {
     
     let images = [
         UIImage(named: "karubo"),
-        UIImage(named: "okonomiyakijpg"),
+        UIImage(named: "okonomiyaki"),
         UIImage(named: "yasaiitame")
     ]
     
@@ -81,9 +81,9 @@ class CookSkillViewController: UIViewController {
     }
     
     func setLayerToButton(button: UIButton) {
-        button.layer.borderColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1).cgColor
-        button.layer.borderWidth = 5
-        button.layer.cornerRadius = button.frame.width / 2
+        //button.layer.borderColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1).cgColor
+        //button.layer.borderWidth = 5
+        //button.layer.cornerRadius = button.frame.width / 2
     }
 }
 

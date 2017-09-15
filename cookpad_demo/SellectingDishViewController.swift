@@ -17,6 +17,8 @@ class SellectingDishViewController: UIViewController {
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
     
+    var targetDish: Dish!
+    
     @IBAction func tapRight(_ sender: UIButton) {
         kolodaView.swipe(SwipeResultDirection.right, force: true)
     }
@@ -37,7 +39,7 @@ class SellectingDishViewController: UIViewController {
         kolodaView.backgroundColor = UIColor.white
         
         //for index in 0...2 {
-            let card = createCard(image: image!, coverViewFrame: kolodaView.frame, title: titleString)
+            let card = createCard(image: targetDish.image!, coverViewFrame: kolodaView.frame, title: targetDish.name!)
             dataSource.append(card)
         //}
         
@@ -92,10 +94,17 @@ class SellectingDishViewController: UIViewController {
     }
     
     func setLayerToButton(button: UIButton) {
-        button.layer.borderColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1).cgColor
-        button.layer.borderWidth = 5
-        button.layer.cornerRadius = button.frame.width / 2
-        button.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+        //button.layer.borderColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1).cgColor
+        //button.layer.borderWidth = 5
+        //button.layer.cornerRadius = button.frame.width / 2
+        //button.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToDecide" {
+            let targetController = segue.destination as! DecideDishViewController
+            targetController.targetDish = sender as! Dish
+        }
     }
 }
 
@@ -127,7 +136,7 @@ extension SellectingDishViewController: KolodaViewDelegate {
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         if (direction == .right) {
-            performSegue(withIdentifier: "segueToDecide", sender: self)
+            performSegue(withIdentifier: "segueToDecide", sender: targetDish)
         } else {
             print("oghoehgogeohg")
             self.navigationController?.popViewController(animated: true)
@@ -138,3 +147,4 @@ extension SellectingDishViewController: KolodaViewDelegate {
         print("didselectcart\(index)")
     }
 }
+

@@ -24,7 +24,7 @@ class SellectingViewController: UIViewController {
     }
     
     let images = [
-        UIImage(named: "dish1.jpg"),
+        UIImage(named: "kare"),
         UIImage(named: "dish2.jpg"),
         UIImage(named: "dish3.jpg")
     ]
@@ -99,10 +99,10 @@ class SellectingViewController: UIViewController {
     }
     
     func setLayerToButton(button: UIButton) {
-        button.layer.borderColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1).cgColor
-        button.layer.borderWidth = 5
-        button.layer.cornerRadius = button.frame.width / 2
-        button.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+        //button.layer.borderColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1).cgColor
+        //button.layer.borderWidth = 5
+        //button.layer.cornerRadius = button.frame.width / 2
+        //button.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
     }
 }
 

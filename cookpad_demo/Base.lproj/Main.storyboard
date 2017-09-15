@@ -48,20 +48,20 @@
                                     <constraint firstAttribute="height" constant="48" id="LdJ-WP-njc"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="nqZ-dA-Nun">
-                                <rect key="frame" x="67" y="242" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flicImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="nqZ-dA-Nun">
+                                <rect key="frame" x="137" y="242" width="100" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="ATB-0j-Mtn"/>
-                                    <constraint firstAttribute="height" constant="128" id="eFv-DD-fCR"/>
+                                    <constraint firstAttribute="width" constant="100" id="ATB-0j-Mtn"/>
+                                    <constraint firstAttribute="height" constant="150" id="eFv-DD-fCR"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sf-5M-e72">
-                                <rect key="frame" x="161.5" y="468" width="51" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sf-5M-e72">
+                                <rect key="frame" x="72" y="432" width="230" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="jMQ-wA-exH"/>
+                                    <constraint firstAttribute="width" constant="230" id="PEz-d6-1BW"/>
+                                    <constraint firstAttribute="height" constant="100" id="jMQ-wA-exH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Start"/>
+                                <state key="normal" image="start.png"/>
                                 <connections>
                                     <segue destination="2mk-Th-Zng" kind="show" id="H0w-cq-eJp"/>
                                 </connections>
@@ -72,7 +72,7 @@
                             <constraint firstItem="zAY-RT-Z7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JKb-1w-9Hd"/>
                             <constraint firstItem="nqZ-dA-Nun" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ut8-Tz-yzb"/>
                             <constraint firstItem="5Sf-5M-e72" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cev-Og-94G"/>
-                            <constraint firstItem="5Sf-5M-e72" firstAttribute="top" secondItem="nqZ-dA-Nun" secondAttribute="bottom" constant="98" id="nGu-8q-j0Y"/>
+                            <constraint firstItem="5Sf-5M-e72" firstAttribute="top" secondItem="nqZ-dA-Nun" secondAttribute="bottom" constant="40" id="nGu-8q-j0Y"/>
                             <constraint firstItem="zAY-RT-Z7S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="118" id="odi-E1-PNP"/>
                             <constraint firstItem="nqZ-dA-Nun" firstAttribute="top" secondItem="zAY-RT-Z7S" secondAttribute="bottom" constant="56" id="vdF-Dl-OBX"/>
                         </constraints>
@@ -110,7 +110,7 @@
                                             <constraint firstAttribute="width" constant="100" id="jQm-B5-iVa"/>
                                             <constraint firstAttribute="height" constant="100" id="zj9-zP-Jyb"/>
                                         </constraints>
-                                        <state key="normal" image="close.png"/>
+                                        <state key="normal" image="batu.png"/>
                                         <connections>
                                             <action selector="tapLeft:" destination="pzE-Qm-Qku" eventType="touchUpInside" id="K0F-8E-Egi"/>
                                         </connections>
@@ -196,7 +196,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レベル ３" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGH-Cw-evb">
-                                        <rect key="frame" x="116" y="281" width="111.5" height="21"/>
+                                        <rect key="frame" x="116" y="183" width="111.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="uKv-VM-Yuo"/>
                                         </constraints>
@@ -205,37 +205,37 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="WkH-Z3-qNU">
-                                        <rect key="frame" x="46.5" y="380" width="250" height="50"/>
+                                        <rect key="frame" x="46.5" y="282" width="250" height="50"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="o-star.png" translatesAutoresizingMaskIntoConstraints="NO" id="fha-Hp-JIg">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.png" translatesAutoresizingMaskIntoConstraints="NO" id="fha-Hp-JIg">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="KAa-ZE-Kz8"/>
                                                     <constraint firstAttribute="width" constant="50" id="lyr-Je-gS7"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="o-star.png" translatesAutoresizingMaskIntoConstraints="NO" id="pJj-kX-RFj">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.png" translatesAutoresizingMaskIntoConstraints="NO" id="pJj-kX-RFj">
                                                 <rect key="frame" x="50" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="WAI-0i-dOa"/>
                                                     <constraint firstAttribute="height" constant="50" id="som-iH-vo0"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="o-star.png" translatesAutoresizingMaskIntoConstraints="NO" id="aEf-FN-ig4">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.png" translatesAutoresizingMaskIntoConstraints="NO" id="aEf-FN-ig4">
                                                 <rect key="frame" x="100" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="IDu-dP-ktA"/>
                                                     <constraint firstAttribute="width" constant="50" id="o6C-bM-ixv"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="o-star.png" translatesAutoresizingMaskIntoConstraints="NO" id="CdQ-m8-OIC">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-o.png" translatesAutoresizingMaskIntoConstraints="NO" id="CdQ-m8-OIC">
                                                 <rect key="frame" x="150" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="3cj-JS-9jJ"/>
                                                     <constraint firstAttribute="width" constant="50" id="pvc-kg-y2R"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="o-star.png" translatesAutoresizingMaskIntoConstraints="NO" id="jTu-PB-B9s">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-o.png" translatesAutoresizingMaskIntoConstraints="NO" id="jTu-PB-B9s">
                                                 <rect key="frame" x="200" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="a83-de-aRR"/>
@@ -263,7 +263,7 @@
                                     <constraint firstItem="c4P-X4-8vC" firstAttribute="top" secondItem="g1K-Se-qXd" secondAttribute="top" constant="112" id="A31-6i-uKO"/>
                                     <constraint firstItem="WkH-Z3-qNU" firstAttribute="centerX" secondItem="g1K-Se-qXd" secondAttribute="centerX" id="J5C-f4-cuL"/>
                                     <constraint firstItem="WkH-Z3-qNU" firstAttribute="top" secondItem="xGH-Cw-evb" secondAttribute="bottom" constant="78" id="Yuu-Gx-tyF"/>
-                                    <constraint firstItem="xGH-Cw-evb" firstAttribute="top" secondItem="c4P-X4-8vC" secondAttribute="bottom" constant="148" id="l9q-iY-YGU"/>
+                                    <constraint firstItem="xGH-Cw-evb" firstAttribute="top" secondItem="c4P-X4-8vC" secondAttribute="bottom" constant="50" id="l9q-iY-YGU"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -327,7 +327,7 @@
                                             <constraint firstAttribute="width" constant="100" id="DRr-tC-egY"/>
                                             <constraint firstAttribute="height" constant="100" id="yBg-qe-Xge"/>
                                         </constraints>
-                                        <state key="normal" image="boy_say_no.png"/>
+                                        <state key="normal" image="man-no.png"/>
                                         <connections>
                                             <action selector="tapLeft:" destination="BuB-Ea-Xvt" eventType="touchUpInside" id="8xY-Fe-sgD"/>
                                             <action selector="tapLeft:" destination="pzE-Qm-Qku" eventType="touchUpInside" id="NhS-AI-1W5"/>
@@ -339,7 +339,7 @@
                                             <constraint firstAttribute="width" constant="100" id="0Vj-wI-ieU"/>
                                             <constraint firstAttribute="height" constant="100" id="Eem-e8-pNy"/>
                                         </constraints>
-                                        <state key="normal" image="boy_say_yes.png"/>
+                                        <state key="normal" image="man-yes.png"/>
                                         <connections>
                                             <action selector="tapRight:" destination="pzE-Qm-Qku" eventType="touchUpInside" id="DSo-AF-4SK"/>
                                             <action selector="tapRight:" destination="BuB-Ea-Xvt" eventType="touchUpInside" id="Or0-wi-gib"/>
@@ -448,10 +448,21 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたが選んで彼に提案しよう！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCv-2V-B7k">
+                                <rect key="frame" x="57" y="8" width="260" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="YuD-Yg-FjV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="OCv-2V-B7k" firstAttribute="top" secondItem="ta3-Ff-die" secondAttribute="bottom" constant="8" id="0o9-EO-eaS"/>
                             <constraint firstItem="QyI-XF-Xme" firstAttribute="top" secondItem="sck-CC-1ax" secondAttribute="bottom" constant="8" id="0us-Gi-LKU"/>
+                            <constraint firstItem="OCv-2V-B7k" firstAttribute="centerX" secondItem="2lH-wC-JbF" secondAttribute="centerX" id="FJi-4t-h0Y"/>
                             <constraint firstItem="sck-CC-1ax" firstAttribute="top" secondItem="ta3-Ff-die" secondAttribute="bottom" constant="50" id="JSv-l8-RtZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sck-CC-1ax" secondAttribute="trailing" constant="8" id="Qr4-fS-spu"/>
                             <constraint firstItem="sck-CC-1ax" firstAttribute="leading" secondItem="2lH-wC-JbF" secondAttribute="leadingMargin" constant="8" id="pWH-By-g7p"/>
@@ -534,7 +545,7 @@
                                             <constraint firstAttribute="width" constant="100" id="hcJ-bg-4ft"/>
                                             <constraint firstAttribute="height" constant="100" id="kex-gZ-zw4"/>
                                         </constraints>
-                                        <state key="normal" image="boy_say_no.png"/>
+                                        <state key="normal" image="man-no.png"/>
                                         <connections>
                                             <action selector="tapLeft:" destination="pzE-Qm-Qku" eventType="touchUpInside" id="Q9V-Sr-bVf"/>
                                             <action selector="tapLeft:" destination="xyx-ji-agI" eventType="touchUpInside" id="uzO-Z9-ZDt"/>
@@ -546,7 +557,7 @@
                                             <constraint firstAttribute="height" constant="100" id="JhA-LB-e22"/>
                                             <constraint firstAttribute="width" constant="100" id="ibI-oK-rWt"/>
                                         </constraints>
-                                        <state key="normal" image="boy_say_yes.png"/>
+                                        <state key="normal" image="man-yes.png"/>
                                         <connections>
                                             <action selector="tapRight:" destination="pzE-Qm-Qku" eventType="touchUpInside" id="R0G-04-S2j"/>
                                             <action selector="tapRight:" destination="xyx-ji-agI" eventType="touchUpInside" id="mj9-gY-ZpN"/>
@@ -633,6 +644,9 @@
                                 <state key="normal" title="詳しいレシピを見る">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapCookpadButton:" destination="5pf-Lf-frx" eventType="touchUpInside" id="8Wy-c2-ydr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -666,6 +680,10 @@
                             </constraints>
                         </view>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cookpadButton" destination="NMI-aA-Q7p" id="KnP-Wo-wMr"/>
+                        <outlet property="titleLabel" destination="5C1-cF-hOA" id="VgQ-Hh-PAs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0S-Th-3ov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -674,13 +692,15 @@
     </scenes>
     <resources>
         <image name="Group.png" width="1500" height="2364"/>
-        <image name="boy_say_no.png" width="244" height="244"/>
-        <image name="boy_say_yes.png" width="244" height="244"/>
-        <image name="close.png" width="72" height="72"/>
+        <image name="batu.png" width="424" height="424"/>
         <image name="dish1.jpg" width="640" height="480"/>
-        <image name="favo.png" width="72" height="72"/>
+        <image name="favo.png" width="424" height="424"/>
+        <image name="flicImage.png" width="264" height="452"/>
         <image name="logo.png" width="406" height="118"/>
-        <image name="noImage.png" width="400" height="400"/>
-        <image name="o-star.png" width="156" height="148"/>
+        <image name="man-no.png" width="424" height="424"/>
+        <image name="man-yes.png" width="424" height="424"/>
+        <image name="star-o.png" width="156" height="148"/>
+        <image name="star.png" width="148" height="140"/>
+        <image name="start.png" width="716" height="308"/>
     </resources>
 </document>
